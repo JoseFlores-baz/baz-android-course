@@ -1,6 +1,4 @@
 # Reto de Criptomonedas
-
-## El Desafío
 El desafío original consistia en construir una aplicación de Android completa por cuenta propia. Sin limitaciones.
 El propósito original era construir una aplicación que use la API pública de Bitso, la cuál debía incluir:
 
