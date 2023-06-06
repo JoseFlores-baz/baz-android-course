@@ -60,3 +60,7 @@ Posteriormente a los entregables originales he creadao una migracion de la UI de
 - compose_migration
 
 Esta rama se ha integrado a main.
+
+-full_clean_arch
+
+Enla rama full_clean_arch exploro la migración del proyecto a clen achitecture multi módulo, esta rama aún no se itegra a la rama principal.
