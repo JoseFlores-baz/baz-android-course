@@ -2,6 +2,7 @@ package com.androidcourse.data
 
 import com.andcourse.domain.model.BookDetailModel
 import com.andcourse.domain.repository.BooksRepositoryInterface
+import com.androidcourse.data.interactors.GetBookDetailUseCase
 import com.google.common.truth.Truth.assertThat
 import io.mockk.*
 import kotlinx.coroutines.*

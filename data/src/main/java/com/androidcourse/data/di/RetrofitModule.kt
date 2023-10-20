@@ -36,7 +36,7 @@ object RetrofitModule {
     @Provides
     fun provideOkHttpClient(
         headerInterceptor: Interceptor,
-        loggInterceptor: HttpLoggingInterceptor
+        loggInterceptor: HttpLoggingInterceptor,
     ): OkHttpClient = OkHttpClient.Builder()
         .addInterceptor(headerInterceptor)
         .addInterceptor(loggInterceptor).build()
@@ -44,7 +44,7 @@ object RetrofitModule {
     @Singleton
     @Provides
     fun provideRetrofit(
-        okHttpClient: OkHttpClient
+        okHttpClient: OkHttpClient,
     ): Retrofit = Retrofit.Builder()
         .baseUrl(BuildConfig.API_PRINCIPAL_PATH)
         .addConverterFactory(GsonConverterFactory.create())

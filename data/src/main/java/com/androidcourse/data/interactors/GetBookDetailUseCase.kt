@@ -1,4 +1,4 @@
-package com.androidcourse.data
+package com.androidcourse.data.interactors
 
 import com.andcourse.domain.model.BookDetailModel
 import com.andcourse.domain.repository.BooksRepositoryInterface
@@ -9,7 +9,7 @@ import javax.inject.Inject
 
 class GetBookDetailUseCase @Inject constructor(
     private val repository: BooksRepositoryInterface,
-    @ApplicationScope private val externalScope: CoroutineScope
+    @ApplicationScope private val externalScope: CoroutineScope,
 ) {
     /***
      * Returns a detail of a book of a crypto currency

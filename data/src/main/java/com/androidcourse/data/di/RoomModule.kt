@@ -10,18 +10,17 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
-
 @Module
 @InstallIn(SingletonComponent::class)
 object RoomModule {
     @Singleton
     @Provides
     fun provideRoomInstance(
-        @ApplicationContext context: Context
+        @ApplicationContext context: Context,
     ) = Room.databaseBuilder(
         context,
         AppDataBase::class.java,
-        "com_mx_baz_android_course_db"
+        "com_mx_baz_android_course_db",
     ).build()
 
     @Singleton

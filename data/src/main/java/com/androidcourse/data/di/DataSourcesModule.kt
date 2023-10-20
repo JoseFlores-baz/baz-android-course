@@ -29,40 +29,40 @@ object DataSourcesModule {
     @Singleton
     @Provides
     fun provideBooksLocalDataSource(
-        dao: BooksDao
+        dao: BooksDao,
     ): GeneralLocalDataSourceInterface<BookEntity> {
         return BooksLocalDataSourceImpl(
-            dao
+            dao,
         )
     }
 
     @Singleton
     @Provides
     fun provideBooksLocalDataSourceRx(
-        dao: BooksDao
+        dao: BooksDao,
     ): RXInterface<BookEntity> {
         return BooksLocalDataSourceImpl(
-            dao
+            dao,
         )
     }
 
     @Singleton
     @Provides
     fun provideBookDetailsLocalDataSource(
-        dao: BookDetailsDao
+        dao: BookDetailsDao,
     ): RowByIdLocaleDataSourceInterface<BookDetailEntity, String> {
         return BookDetailsLocalDatasourceImpl(
-            dao
+            dao,
         )
     }
 
     @Singleton
     @Provides
     fun provideBookOrdersDataSource(
-        dao: BookOrdersDao
+        dao: BookOrdersDao,
     ): CollectionLocaleDataSourceInterface<BookOrderEntity, String> {
         return BookOrdersLocalDataSourceImpl(
-            dao
+            dao,
         )
     }
 
@@ -70,11 +70,11 @@ object DataSourcesModule {
     @Provides
     fun provideRemoteDataSource(
         apiInterface: ApplicationAPIInterface,
-        @ApplicationScope externalScope: CoroutineScope
+        @ApplicationScope externalScope: CoroutineScope,
     ): CryptoRemoteDataSourceInterface {
         return CryptoRemoteDataSourceImpl(
             apiInterface,
-            externalScope
+            externalScope,
         )
     }
 }

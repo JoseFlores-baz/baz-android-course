@@ -1,5 +1,4 @@
-package com.androidcourse.data
-
+package com.androidcourse.data.interactors
 
 import com.andcourse.domain.model.BookModel
 import com.andcourse.domain.model.staticdata.ApplicationCurrency
@@ -11,7 +10,7 @@ import javax.inject.Inject
 
 class GetAllBooksFilteredUseCase @Inject constructor(
     private val repository: BooksRepositoryInterface,
-    @ApplicationScope private val externalScope: CoroutineScope
+    @ApplicationScope private val externalScope: CoroutineScope,
 ) {
     /***
      *
@@ -22,8 +21,8 @@ class GetAllBooksFilteredUseCase @Inject constructor(
     suspend operator fun invoke(currentCurrency: String): List<BookModel> =
         withContext(externalScope.coroutineContext) {
             repository.getAllBooks().filter {
-                it.book.endsWith("_$currentCurrency")
-                        && ApplicationCurrency.findByTicker((it.book)) != null
+                it.book.endsWith("_$currentCurrency") &&
+                    ApplicationCurrency.findByTicker((it.book)) != null
             }
         }
 }
