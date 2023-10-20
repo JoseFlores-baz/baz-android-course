@@ -1,6 +1,5 @@
 package com.androidcourse.data.di
 
-
 import com.andcourse.domain.repository.BooksRepositoryInterface
 import com.androidcourse.data.datasource.local.CollectionLocaleDataSourceInterface
 import com.androidcourse.data.datasource.local.RXInterface
@@ -28,14 +27,14 @@ object RepositoryModule {
         localeDetailDataSource: RowByIdLocaleDataSourceInterface<BookDetailEntity, String>,
         localeOrdersDataSource: CollectionLocaleDataSourceInterface<BookOrderEntity, String>,
         remoteDataSource: CryptoRemoteDataSourceInterface,
-        networkManager: NetworkManagerInterface
+        networkManager: NetworkManagerInterface,
     ): BooksRepositoryInterface {
         return BooksRepositoryImpl(
             localeBooksDataSource,
             localeDetailDataSource,
             localeOrdersDataSource,
             remoteDataSource,
-            networkManager
+            networkManager,
         )
     }
 }

@@ -9,9 +9,9 @@ import com.andcourse.domain.model.BookDetailModel
 import com.andcourse.domain.model.BookModel
 import com.andcourse.domain.model.BookOrdersModel
 import com.andcourse.domain.model.staticdata.ApplicationCurrency
-import com.androidcourse.data.GetAllBooksFilteredUseCase
-import com.androidcourse.data.GetBookDetailUseCase
-import com.androidcourse.data.GetBookOrdersUseCase
+import com.androidcourse.data.interactors.GetAllBooksFilteredUseCase
+import com.androidcourse.data.interactors.GetBookDetailUseCase
+import com.androidcourse.data.interactors.GetBookOrdersUseCase
 import com.androidcourse.data.di.ApplicationScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope

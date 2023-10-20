@@ -3,9 +3,9 @@ package com.example.bazandroidcourse.ui.viewmodel
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.andcourse.domain.model.BookModel
 
-import com.androidcourse.data.GetAllBooksFilteredUseCase
-import com.androidcourse.data.GetBookDetailUseCase
-import com.androidcourse.data.GetBookOrdersUseCase
+import com.androidcourse.data.interactors.GetAllBooksFilteredUseCase
+import com.androidcourse.data.interactors.GetBookDetailUseCase
+import com.androidcourse.data.interactors.GetBookOrdersUseCase
 import com.androidcourse.data.repository.BooksRepositoryImpl
 import com.example.bazandroidcourse.viewmodel.BooksViewModel
 import com.google.common.truth.Truth.assertThat
